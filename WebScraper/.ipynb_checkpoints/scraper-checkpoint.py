@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from playright.sync_api import sync_playright
 
 # the page url we are scraping from 
 standings_url = "https://fbref.com/en/comps/9/Premier-League-Stats"
@@ -10,8 +11,8 @@ data = requests.get(standings_url)
 soup = BeautifulSoup(data.text, 'html.parser')
 
 # get only the first element name in html page
-standings_table = soup.select('table.stats_table')[0]
-
+standings_table = soup.select('table.stats_table')
+print(standings_table)
 
 if standings_table:
     standings_table = standings_table[0]
@@ -31,4 +32,3 @@ links = [l for l in links if '/squad/' in l]
 
 
 team_url = [f"https://fbref/com/{l}" for l in links]
-
