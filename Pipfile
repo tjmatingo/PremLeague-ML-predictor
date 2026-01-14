@@ -11,6 +11,7 @@ lxml-html-clean = "*"
 pyppeteer = "*"
 playwright = "*"
 selenium = "*"
+pandas = "*"
 
 [dev-packages]
 ipykernel = "*"
