@@ -12,6 +12,7 @@ pyppeteer = "*"
 playwright = "*"
 selenium = "*"
 pandas = "*"
+scikit-learn = "*"
 
 [dev-packages]
 ipykernel = "*"
